@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}
+.container {
+    max-width: 60vh;
+    height: 35vh;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem 2.5rem;
+    transition: height 1s ease;
+}
+.container.active {
+    height: 70vh;
+}
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+header p {
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.container .userInput {
+    margin: 2rem 0 2rem;
+}
+.userInput :where(input, button) {
+    width: 92%;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+}
+.userInput :where(button) {
+    width: 100%;
+}
+.userInput input {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    border: 1px solid #999;
+    border-radius: .5rem;
+}
+.generateBtn {
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    background-color: #785BF8;
+    border: none;
+}
+.container .qrCode {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 1rem 0;
+    border: 1px solid #999;
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: center;
+}
+.container.active .qrCode {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1s 1s ease;
+}
+
+
+/* Responsive */
+/* @media (max-width: 560px) {
+    .container {
+        width: 50vh;
+        transition: 1s ease;
+    }
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header p {
+        font-size: .8rem;
+    }
+}
+@media (max-width: 520px) {
+    .container {
+        width: 45vh;
+        transition: 1s ease;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header p {
+        font-size: .6rem;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        width: 40vh;
+        transition: 1s ease;
+    }
+    header h1 {
+        font-size: 1.4rem;
+    }
+    header p {
+        font-size: .5rem;
+    }
+}
+@media (max-width: 440px) {
+    .container {
+        width: 35vh;
+        transition: 1s ease;
+    }
+    header h1 {
+        font-size: 1.2rem;
+    }
+} */
